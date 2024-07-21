@@ -3,13 +3,16 @@ from streamlit_option_menu import option_menu
 from PIL import Image
 import contato
 import home
+import skills
+import formacao
+import projetos
 
 # Carregar a imagem
-img = Image.open('img/me.jpeg')
+img = Image.open('img/eu.png')
 
 # Configuração da página
 st.set_page_config(page_title="Kaique Miranda", page_icon=img, layout="wide")
-st.sidebar.image('img/me.jpeg', width=280)
+st.sidebar.image('img/eu.png', width=280)
 st.sidebar.markdown("<h1 style='color: white; text-align: left; font-size: 30px; margin-top: -20px; margin-bottom: 40px; margin-left: 40px;'>Kaique Miranda</h1>", unsafe_allow_html=True)
 #st.sidebar.markdown("<h1 style='color: white; text-align: left; font-size: 20px; margin-top: -60px; margin-bottom: 40px; margin-left: 40px;'>Data science Analyst</h1>", unsafe_allow_html=True)
 
@@ -39,19 +42,21 @@ if selecionado == "Home":
 
 # Página Dashboard
 if selecionado == "Habilidades":
-    st.header('Habilidades')
+    skills.inicio()
 
 # Página Mapa
 if selecionado == "Formação":
-    st.header('Formação')
+    formacao.inicio()
 
 # Página Datasets
 if selecionado == "Projetos":
-    st.header('Projetos')
+    projetos.inicio()
 
 # Página Contato
 if selecionado == "Contato":
+    contato.social()
     contato.contact()
+
 
 # Rodapé
 st.markdown("<p style='text-align: center; margin-top: 200px; '> </p>", unsafe_allow_html=True)

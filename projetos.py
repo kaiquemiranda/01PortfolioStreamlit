@@ -13,6 +13,6 @@ path = get("assets/Animation.json")
 
 
 def inicio():
-    st.markdown("<h1 style=' text-align: center; font-size: 60px;  margin-top: -80px;'>Bem-vindo</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style=' text-align: center; font-size: 60px;  margin-top: -80px;'>Projetos desenvolvidos</h1>", unsafe_allow_html=True)
     st_lottie(path, height=600, width=1000)
     #st_lottie(path2, height=500, width=900)
